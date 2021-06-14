@@ -1,6 +1,6 @@
 var canvas = new fabric.Canvas('myCanvas');
-body_image_width = 45;
-body_image_height = 45;
+body_image_width = 30;
+body_image_height = 30;
 player_x = 10;
 player_y = 10;
 var player_object = "";
@@ -133,3 +133,52 @@ if (keyPressed == '72')
 
 }
 
+function up()
+{
+  if (player_y >=0)
+{
+  player_y = player_y - body_image_height;
+  console.log("body image height =" + body_image_height);
+  console.log("when up arrow key is pressed, X = " + player_x + " , Y = " +player_y);
+  canvas.remove(player_object);
+  player_update();
+}
+}
+
+function down()
+{
+  if (player_y <=500)
+{
+  player_y = player_y + body_image_height;
+  console.log("body image height =" + body_image_height);
+  console.log("when up arrow key is pressed, X = " + player_x + " , Y = " +player_y);
+  canvas.remove(player_object);
+  player_update();
+}
+}
+
+
+function left()
+{
+  if (player_x >0)
+{
+  player_x = player_x - body_image_width;
+  console.log("body image width =" + body_image_width);
+  console.log("when up arrow key is pressed, X = " + player_x + " , Y = " +player_y);
+  canvas.remove(player_object);
+  player_update();
+}
+}
+
+
+function right()
+{
+  if (player_x <=850)
+{
+  player_x = player_x + body_image_width;
+  console.log("body image width =" + body_image_width);
+  console.log("when up arrow key is pressed, X = " + player_x + " , Y = " +player_y);
+  canvas.remove(player_object);
+  player_update();
+}
+}
